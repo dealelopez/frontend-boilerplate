@@ -1,0 +1,68 @@
+//
+//=== Colores:
+//
+
+@colorPrimario: #ec008c;
+@colorSecundario: #a99146;
+
+@colorLujo1: #0F325C;
+@colorLujo2: #671F55;
+
+@colorPrimarioMotor: #e50370;
+@colorSecundarioMotor: #8f0045;
+
+@colorEnlacesMotor: #10192e;
+
+
+//
+//=== variablesLESS:
+//
+
+#variablesLESS {
+	.colorPrimario {
+		color: @colorPrimario;
+	}
+	.colorSecundario {
+		color: @colorSecundario;
+	}
+}
+
+
+//
+//=== Rutas:
+//
+
+@rutaImagenes: '../images/';
+@rutaBanderas: '../images/flags/';
+@rutaSVG: '../images/svg/';
+@rutaFuentes: '../fonts/';
+
+
+//
+//=== Media queries breakpoint:
+//
+
+// Extra small screen / phone
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// De esta forma las media queries no se solapan:
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);

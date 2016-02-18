@@ -1,0 +1,16 @@
+syntax: glob
+
+*.min.js
+*.min.css
+.DS_Store
+*.zip
+
+syntax: regexp
+
+#^build$
+#^node_modules$
+#^Icon
+
+build
+node_modules
+Icon

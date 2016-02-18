@@ -1,0 +1,41 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "0.0.4",
+  "description": "Boilerplate frontend common tasks",
+  "main": "gulp",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "frontend"
+  ],
+  "author": "Ale López <pardillits@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.2.1",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-image-resize": "^0.6.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.9.2",
+    "gulp-less": "^3.0.1",
+    "gulp-newer": "^0.5.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-preprocess": "^1.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-uncss": "^1.0.0",
+    "gulp-util": "^3.0.3",
+    "gulp-watch": "^4.1.1",
+    "imagemin-pngquant": "^4.0.0",
+    "jshint-stylish": "^1.0.1",
+    "run-sequence": "^1.0.2",
+    "vinyl": "^0.4.6"
+  }
+}

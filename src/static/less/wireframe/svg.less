@@ -1,0 +1,47 @@
+//###################
+//=== SVG MIXIN:
+//###################
+
+
+//=== Importamos las variables globales:
+@import url('./variables.less');
+
+
+//=== Mixin para la personalización de SVG si tiene el atributo 'fill':
+// .icon-fill(@src, @fill-default, @fill-new) {
+.icon-fill(@src, @fill-new) {
+	@escape-fill-default: escape(@colorSecundario);
+	@escape-fill-new: escape(@fill-new);
+	@data-uri: data-uri('image/svg+xml;charset=UTF-8', '@{rutaSVG}@{src}');
+	@replace-src: replace('@{data-uri}', '@{escape-fill-default}', '@{escape-fill-new}');
+	background-image:e(@replace-src);
+}
+//=== Ejemplo de estilos:
+.sol {
+	width: 500px;
+	height: 500px;
+	.icon-fill('solnube_prueba.svg', @colorPrimario);
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+// //=== Mixin para la personalización de SVG si NO tiene el atributo 'fill':
+// .icon-no-fill(@src, @fill-new) {
+// 	@data-uri: data-uri('image/svg+xml;charset=UTF-8', '@{rutaSVG}@{src}');
+// 	@replace-default: escape('<path ');
+// 	@replace-new: escape('<path fill="@{fill-new}" ');
+// 	@replace-src: replace('@{data-uri}', @replace-default, @replace-new, 'g');
+// 	background-image: e(@replace-src);
+// }
+// //=== Ejemplo de estilos:
+// .sol {
+// 	width: 500px;
+// 	height: 500px;
+// 	.icon-no-fill('solnube_old.svg', @colorSecundario);
+// 	display: inline-block;
+// 	background-repeat: no-repeat;
+// 	background-position: center center;
+// 	background-size: contain;
+// }

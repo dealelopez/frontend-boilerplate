@@ -1,0 +1,115 @@
+@import url('../vendor/bootstrap/variables.less');
+@import url('./variables.less');
+@import url('./fuentes.less');
+
+
+
+@media (max-width: @screen-sm-max) {
+	.cbp-spmenu {
+		display: block;
+		margin: 0 !important;
+		overflow-x: hidden;
+		overflow-y: visible;
+		padding: 0;
+		position: fixed;
+	}
+	.cbp-spmenu-vertical {
+		height: 100%;
+		top: 0;
+		width: 260px;
+		z-index: 1000;
+	}
+	.cbp-spmenu-horizontal {
+		height: 150px;
+		left: 0;
+		overflow: hidden;
+		width: 100%;
+		z-index: 1000;
+	}
+	.cbp-spmenu-horizontal h3 {
+		float: left;
+		height: 100%;
+		width: 20%;
+	}
+	.cbp-spmenu-horizontal a {
+		border-left: 1px solid #258ecd;
+		float: left;
+		padding: 0.8em;
+		width: 20%;
+	}
+	.cbp-spmenu-left {
+		left: -260px;
+	}
+	.cbp-spmenu-right {
+		right: -260px;
+	}
+	.cbp-spmenu-left.cbp-spmenu-open {
+		left: 0;
+	}
+	.cbp-spmenu-right.cbp-spmenu-open {
+		right: 0;
+	}
+	.cbp-spmenu-top {
+		top: -150px;
+	}
+	.cbp-spmenu-bottom {
+		bottom: -150px;
+	}
+	.cbp-spmenu-top.cbp-spmenu-open {
+		top: 0;
+	}
+	.cbp-spmenu-bottom.cbp-spmenu-open {
+		bottom: 0;
+	}
+	.cbp-spmenu-push {
+		left: 0;
+		overflow-x: hidden;
+		position: relative;
+	}
+	.cbp-spmenu-push-toright {
+		left: 260px;
+	}
+	.cbp-spmenu-push-toleft {
+		left: -260px;
+	}
+	.cbp-spmenu, .cbp-spmenu-push {
+		transition: all 0.3s ease 0s;
+	}
+	.navbar {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		.navbar-collapse {
+			background: url('@{rutaImagenes}patternOffcanvas.png')!important;
+			visibility: inherit;
+			background-color: #000!important;
+			padding-top: 40px;
+			border: 0 none;
+			height: 100% !important;
+			ul.navbar-nav {
+				margin:0;
+				background: transparent!important;
+				li{
+					display: inline-block!important;
+					width: 100%!important;
+					float: none!important;
+					text-align: center!important;
+					background: transparent!important;
+					a{
+						background: transparent!important;
+					}
+					&.dropdown{
+						display: none!important;
+					}
+					&.active,&:hover, &:focus, &:visited{
+						background: #666!important;
+						color: #ccc!important;
+						a{
+							color: #ccc!important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

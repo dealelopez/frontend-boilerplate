@@ -1,0 +1,78 @@
+//###################
+//=== FUENTES MIXIN:
+//###################
+
+
+//=== Importamos las variables globales:
+@import url('./variables.less');
+
+
+//=== Importamos las fuentes de Google Fonts:
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,400,600,700);
+
+
+//=== Mixin para la importación de fuentes:
+.includeFont(@family: BrandonText, @style: Regular, @weight: normal) {
+	@font-face {
+		font-family: '@{family}-@{style}';
+		src: url('@{rutaFuentes}@{family}_webfont/@{family}-@{style}.eot');
+		src:url('@{rutaFuentes}@{family}_webfont/@{family}-@{style}.eot?#iefix') format('embedded-opentype'),
+			url('@{rutaFuentes}@{family}_webfont/@{family}-@{style}.woff') format('woff'),
+			url('@{rutaFuentes}@{family}_webfont/@{family}-@{style}.woff2') format('woff2'),
+			url('@{rutaFuentes}@{family}_webfont/@{family}-@{style}.ttf') format('truetype'),
+			url('@{rutaFuentes}@{family}_webfont/@{family}-@{style}.svg#icon') format('svg');
+		font-weight: @weight;
+		// font-style: @style;	
+	}
+}
+
+
+//=== Importamos las fuentes:
+.includeFont(BrandonText, Light, normal);
+.includeFont(BrandonText, Regular, normal);
+.includeFont(BrandonText, Medium, normal);
+.includeFont(BrandonText, Bold, normal);
+
+
+//=== Creamos las clases con las fuentes: 
+.brandonLight {
+	font-family: 'BrandonText-Light', 'Raleway', arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.brandonRegular {
+	font-family: 'BrandonText-Regular', 'Raleway', arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.brandonMedium {
+	font-family: 'BrandonText-Medium', 'Raleway', arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.brandonBold {
+	font-family: 'BrandonText-Bold', 'Raleway', arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ralewayExtralight {
+	font-family: 'Raleway', arial, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+.ralewayRegular {
+	font-family: 'Raleway', arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.ralewaySemi {
+	font-family: 'Raleway', arial, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+.ralewayBold {
+	font-family: 'Raleway', arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
